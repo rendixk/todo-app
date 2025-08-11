@@ -1,0 +1,5 @@
+keterangan saja: A = Penanya, B = Me
+
+A: sir, kenapa kok ada file migrasi nama nya 'add-isCompleted-to-task.js'?
+B: pas generate: migrate bagian --attributes lupa ngasih. jadi ya ga bisa migrasi ke MySQL soalnya jejak gergasi (migrasi) nya dah masuk
+

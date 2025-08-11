@@ -1,0 +1,2 @@
+1. React Theme Switcher: https://www.youtube.com/watch?v=WOAk6fhJETs
+2. React Icons: https://www.youtube.com/watch?v=YCJka9W0MLc
