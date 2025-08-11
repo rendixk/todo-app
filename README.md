@@ -31,12 +31,12 @@ Running the Application
 Start the Backend Server:
 
 cd backend
-npm start # Or 'node server.js', etc.
+npm run dev
 
 Start the Frontend Client:
 
 cd ../frontend
-npm start # Or 'npm run dev', etc.
+npm run dev
 ```
 
 The application will be accessible in your web browser at http://localhost:3001.
