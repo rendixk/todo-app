@@ -45,8 +45,15 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 sequelize.sync({ alter: true })
-  .then(() => {
+  .then(async () => {
     console.log('Database synchronized');
+
+    await db.Users.sync()
+    await db.Tasks.sync()
+    await db.DoneTasks.sync()
+    await db.ActivityLogs.sync()
+
+    console.log('All models synchronized');
   })
   .catch(err => {
     console.log('Error synchronizing database: ' + err);
