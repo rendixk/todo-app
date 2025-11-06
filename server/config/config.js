@@ -14,11 +14,11 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": process.env.MYSQLUSER,
-    "password": process.env.MYSQLPASSWORD,
-    "database": process.env.MYSQLDATABASE,
-    "host": process.env.MYSQLHOST,  
+    "username": "root",
+    "password": "jOINMllJuObuONSKqbnTOCBTLJSMYMfS",
+    "database": "railway",
+    "host": "maglev.proxy.rlwy.net",  
     "dialect": "mysql",
-    "port": process.env.MYSQLPORT
+    "port": 5441
   }
 }
