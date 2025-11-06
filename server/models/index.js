@@ -10,7 +10,7 @@ const config = require(__dirname + '/../config/config.js')[env];
 const db = {};
 
 let sequelize;
-Sequelize.authenticate()
+sequelize.authenticate()
   .then(() => console.log("Databse connected"))
   .catch(err => console.error("Database connection error", err))
 if (config.use_env_variable) {
