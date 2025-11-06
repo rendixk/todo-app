@@ -14,7 +14,7 @@ const AccountPopup: React.FC<AccountPopupProps> = ({ isOpen, onClose, userEmail,
 
   // Animasi masuk dan keluar
   const popupClasses = `
-    fixed inset-0 bg-gray-900 bg-opacity-50 z-50 flex items-center justify-center p-4
+    fixed inset-0 ${isDarkMode ? 'bg-gray-900' : 'bg-sky-50'} bg-opacity-50 z-50 flex items-center justify-center p-4
     transition-opacity duration-300 ease-in-out
     ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}
   `;

@@ -168,7 +168,7 @@ export default function DashboardPage() {
 
   return (
     <div className="p-6">
-      <header className="flex justify-between items-center -mt-3 mb-4">
+      <header className="flex justify-between items-center mt-3 mb-4">
         <div className="flex items-center space-x-2">
           {userProfile && (
             <button
@@ -233,7 +233,10 @@ export default function DashboardPage() {
         <AccountPopup
           isOpen={showAccountPopup}
           onClose={handleCloseAccountPopup}
-          user={userProfile}
+          userEmail={userProfile.email}
+          onInitiateLogout={() => {
+            console.log('Logout initiated');
+          }}
         />
       )}
     </div>

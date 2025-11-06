@@ -26,7 +26,7 @@ const LogoutConfirmationPopup: React.FC<LogoutConfirmationPopupProps> = ({ isOpe
   return (
     <div className={popupClasses}>
       <div className={cardClasses}>
-        <h2 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Konfirmasi Keluar</h2>
+        <h2 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Exit Confirmation</h2>
         <p className={`text-sm mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
           Are you sure want to Log Out?
         </p>

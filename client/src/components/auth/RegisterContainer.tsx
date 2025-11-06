@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { Users } from '../../types/Users';
-import { loginUser } from '../../api/userAPI';
+import { registerUser } from '../../api/userAPI';
 import AuthFormLayout from './AuthFormLayout';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useAuth } from '../../context/AuthContext'; // Import useAuth hook
@@ -40,7 +40,7 @@ export default function LoginContainer({ isDarkMode }: LoginContainerProps) {
         return;
       }
 
-      const res = await loginUser(form);
+      const res = await registerUser(form);
       console.log(res);
 
       // Panggil fungsi login dari AuthContext untuk menyimpan token dan email
@@ -63,11 +63,11 @@ export default function LoginContainer({ isDarkMode }: LoginContainerProps) {
 
   return (
     <AuthFormLayout
-      title="Welcome Back!"
-      subtitleText="Sign in to your account"
-      footerText="Don't have an account yet?"
-      footerLinkText="Sign Up"
-      footerLinkTo="/register"
+      title="Welcome!"
+      subtitleText="Sign up first to get full access"
+      footerText="Have an account?"
+      footerLinkText="Sign in"
+      footerLinkTo="/login"
     >
       <form onSubmit={handleSubmit}>
         {message && (
@@ -120,7 +120,7 @@ export default function LoginContainer({ isDarkMode }: LoginContainerProps) {
           type="submit"
           className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition duration-200"
         >
-          Sign In
+          Sign Up
         </button>
       </form>
     </AuthFormLayout>

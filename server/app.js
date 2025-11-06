@@ -6,8 +6,8 @@ const app = express()
 const indexRouter = require('./routes/index')
 const userRouter = require('./routes/users')
 const taskRouter = require('./routes/tasks')
-const doneTaskRouter = require('./routes/donetasks')
-const supportRouter = require('./routes/support')
+// const doneTaskRouter = require('./routes/donetasks')
+// const supportRouter = require('./routes/support')
 
 app.use(express.json())
 // app.use(cors({
@@ -19,8 +19,8 @@ app.use(cors())
 app.use('/welcome', indexRouter)
 app.use('/users', userRouter)
 app.use('/tasks', taskRouter)
-app.use('/donetasks', doneTaskRouter)
-app.use('/support', supportRouter)
+// app.use('/donetasks', doneTaskRouter)
+// app.use('/support', supportRouter)
 
 //cek route root
 app.get('/', (req, res) => {
