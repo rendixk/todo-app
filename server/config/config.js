@@ -17,7 +17,7 @@ module.exports = {
     "username": "root",
     "password": "jOINMllJuObuONSKqbnTOCBTLJSMYMfS",
     "database": "railway",
-    "host": "maglev.proxy.rlwy.net",  
+    "host": "mysql-production-f7f31.up.railway.app",  
     "dialect": "mysql",
     "port": 5441
   }
