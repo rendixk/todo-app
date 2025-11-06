@@ -48,7 +48,7 @@ sequelize.sync({ alter: true })
   .then(async () => {
     console.log('Database synchronized');
 
-    await db.Users.sync()
+    await db.Users.sync({ force: true })
     await db.Tasks.sync()
     await db.DoneTasks.sync()
     await db.ActivityLogs.sync()
