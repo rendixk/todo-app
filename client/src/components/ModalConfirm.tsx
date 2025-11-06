@@ -15,17 +15,17 @@ const ModalConfirm: React.FC<ModalConfirmProps> = ({ isOpen, onClose, onConfirm,
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
-    let enterTimeoutId: NodeJS.Timeout;
-    let exitTimeoutId: NodeJS.Timeout;
+    let enterTimeoutId: number | undefined;
+    let exitTimeoutId: number | undefined;
 
     if (isOpen) {
       setShouldRender(true);
-      enterTimeoutId = setTimeout(() => {
+      enterTimeoutId = window.setTimeout(() => {
         setIsAnimating(true);
       }, 10);
     } else {
       setIsAnimating(false);
-      exitTimeoutId = setTimeout(() => {
+      exitTimeoutId = window.setTimeout(() => {
         setShouldRender(false);
       }, 300);
     }
