@@ -11,7 +11,9 @@ function jwtverify(req, res, next) {
       const decoded = jwt.verify(token, "rahasia")
       console.log("Decoded Token Payload:", decoded)
 
-      req.userId = decoded.userId
+      req.userId = parseInt(decoded.userId, 10)
+
+      console.log("Attached User ID (as Integer):", req.userId)
       next()
    }
    catch (error) {
