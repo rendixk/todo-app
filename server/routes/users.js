@@ -85,10 +85,10 @@ router.delete('/reset/all', async (req, res) => {
     
     await sequelize.transaction(async (t) => {
       await sequelize.query("SET FOREIGN_KEY_CHECKS = 0", { transaction: t })
-      await sequelize.query("TRUNCATE TABLE tasks", { transaction: t })
-      await sequelize.query("TRUNCATE TABLE donetasks", { transaction: t })
-      await sequelize.query("TRUNCATE TABLE users", { transaction: t })
-      await sequelize.query("TRUNCATE TABLE supports", { transaction: t })
+      await sequelize.query("TRUNCATE TABLE Tasks", { transaction: t })
+      await sequelize.query("TRUNCATE TABLE DoneTasks", { transaction: t })
+      await sequelize.query("TRUNCATE TABLE Users", { transaction: t })
+      await sequelize.query("TRUNCATE TABLE Supports", { transaction: t })
       await sequelize.query("SET FOREIGN_KEY_CHECKS = 1", { transaction: t })
     })
     res.status(200).json({ message: "All user data has been reset successfully" })
