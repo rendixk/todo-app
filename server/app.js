@@ -15,7 +15,7 @@ app.use(express.json())
 //   credentials: true
 // }))
 app.use(cors({
-  origin: ["http://localhost:5173", "https://todo-six-liart-34.vercel.app/"],
+  origin: ["http://localhost:5173", "https://todo-six-liart-34.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }))
