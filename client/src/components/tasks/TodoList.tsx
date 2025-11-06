@@ -17,12 +17,16 @@ const TodoList: React.FC<TodoListProps> = ({
   onDelete,
   onShowInfo,
 }) => {
+  if(!tasks) {
+    // return <p className="text-center text-gray-400 text-lg py-10">No tasks found. Add a new task to get started!</p>
+  }
+
   return (
     <div className="space-y-4">
-      {tasks.length === 0 ? (
+      {tasks?.length === 0 ? (
         <p className="text-center text-gray-400 text-lg py-10">No tasks found. Add a new task to get started!</p>
       ) : (
-        tasks.map(task => (
+        (tasks ?? []).map(task => (
           <TodoItemContainer
             key={task.id}
             task={task}

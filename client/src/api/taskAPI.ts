@@ -1,7 +1,7 @@
 import axios from 'axios'
 import type { Task, NewTaskPayload } from '../types/Tasks'
 
-const API_BASE_URL = 'https://vfs90dhv-3001.asse.devtunnels.ms/tasks'
+const API_BASE_URL = `${import.meta.env.VITE_BASE_URL_API}/tasks`
 
 const getAuthHeaders = () => {
   const token = localStorage.getItem('token')

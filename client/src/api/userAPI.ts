@@ -1,7 +1,7 @@
 import axios from 'axios'
 import type { Users, UserProfile } from "../types/Users"
 
-const USER_API = "https://vfs90dhv-3001.asse.devtunnels.ms/users"
+const USER_API = `${import.meta.env.VITE_BASE_URL_API}/users`
 
 export async function loginUser(userData: Pick<Users, "email" | "password">) {
   try {

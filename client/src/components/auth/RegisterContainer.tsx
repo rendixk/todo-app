@@ -46,7 +46,7 @@ export default function LoginContainer({ isDarkMode }: LoginContainerProps) {
       // Panggil fungsi login dari AuthContext untuk menyimpan token dan email
       login(res.token, form.email);
 
-      setMessage("Login Successful!");
+      setMessage("Sign Up Successfull!");
 
       setTimeout(() => {
         navigate("/dashboard");
