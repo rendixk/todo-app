@@ -15,9 +15,10 @@
   },
   "production": {
     "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "password": "jOINMllJuObuONSKqbnTOCBTLJSMYMfS",
+    "database": "railway",
+    "host": "mysql-production-f7f31.up.railway.app",  
+    "dialect": "mysql",
+    "port": 3306
   }
 }
